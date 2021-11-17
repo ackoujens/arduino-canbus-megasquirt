@@ -10,13 +10,22 @@
   by Jens Ackou
 */
 
+#include "src/Canbus.h"
+#include "src/Button.h"
+
+// Objects
+Canbus canbusInstance1(1);
+
 // the setup function runs once when you press reset or power the board
 void setup() {
 }
 
 // the loop function runs over and over again forever
 void loop() {
+  canbusInstance1.on();
   delay(5000);
+  canbusInstance1.off();
+  delay(5000);
+
   Serial.println("LOOP DONE");
 }
-
