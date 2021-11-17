@@ -1,2 +1,5 @@
-# Ignore VSCode settings
+# VSCode settings
 /.vscode
+
+# Temporary files to be deleted
+/temp
