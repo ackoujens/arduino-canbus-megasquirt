@@ -10,22 +10,21 @@
   by Jens Ackou
 */
 
+//#include <SPI.h>
 #include "src/Canbus.h"
-#include "src/Button.h"
 
-// Objects
-Canbus canbusInstance1(1);
+//int analogValue = 0;
+Canbus MSCan;
 
-// the setup function runs once when you press reset or power the board
 void setup() {
+  Serial.begin(9600); // baud rate serial monitor
+  MSCan.init();
+  Serial.println("Main: Setup completed");
 }
 
-// the loop function runs over and over again forever
 void loop() {
-  canbusInstance1.on();
-  delay(5000);
-  canbusInstance1.off();
-  delay(5000);
-
-  Serial.println("LOOP DONE");
+  MSCan.set();
+  MSCan.send();
+  //MSCan.receive();
+  delay(1000);
 }
