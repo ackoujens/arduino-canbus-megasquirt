@@ -1,5 +1,9 @@
-# VSCode settings
+# VSCode
 /.vscode
+*.code-workspace
 
-# Temporary files to be deleted
+# Temporary files
 /temp
+
+# OS Junk
+.DS_Store
